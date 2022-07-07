@@ -23,7 +23,7 @@ export default function Search(props) {
     setSearchbarText(e.target.value);
 
     props.setSearch(e.target.value);
-    console.log(`Searching for ${e.target.value}...`);
+    // console.log(`Searching for ${e.target.value}...`);
   }
 
   function debouncer(fun,delay){
@@ -58,7 +58,7 @@ export default function Search(props) {
      
    { (searchIsFocused || searchBitIsFocused) && searchbar_text!=="" && <div id="search-results"  onMouseEnter={()=>setSearchBitIsFocused(true)} onMouseLeave={()=>setSearchBitIsFocused(false)} >
      {filteredProductList.map((eachProductObj)=>{
-        return <Link to={`/allproducts/${eachProductObj.id}`} onClick={()=>setSearchBitIsFocused(false)} id="search-list-bit">&nbsp;&nbsp;{eachProductObj.description}</Link>
+        return <Link to={`/allproducts/${eachProductObj.id}`} onClick={()=>setSearchBitIsFocused(false)} id="search-list-bit" key={eachProductObj.id}>&nbsp;&nbsp;{eachProductObj.description}</Link>
      })}
 
 
