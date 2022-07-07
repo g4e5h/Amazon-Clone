@@ -3,14 +3,19 @@ import React from 'react'
 import './style.css'
 import allproducts from '../../../../ProductsList'
 import SmallContainer from '../SmallContainers/SmallContainer';
+import { Link } from 'react-router-dom';
 
 export default function LargeCompContainer(props) {
   let allfiltered=null;
   let requiredfour=null;
+  let filtervalue="undefined";
+  
   if(props.filter!=null){
+    filtervalue=props.filter[0];
+
   allfiltered=allproducts.filter((singleProduct) => {
    
-     return props.filter[0]===singleProduct.type;
+     return filtervalue===singleProduct.type;
   
   } );
 
@@ -38,9 +43,12 @@ export default function LargeCompContainer(props) {
 
 
      </div>
-
-
-     <a id='large-comp-container-bottom-anchor' href='/{}'>{props.bottomAnchor}</a>
+     {filtervalue!=="undefined"?
+      <Link to={`/allproducts/typesearch${filtervalue}`} id='large-comp-container-bottom-anchor'>{props.bottomAnchor}</Link>
+      :
+      <button style={{textDecoration:"none",cursor:"pointer",outline:"none",backgroundColor:"transparent",border:"0px"}} id='large-comp-container-bottom-anchor'>{props.bottomAnchor}</button>
+     }
+    
     </div>
   )
 }
