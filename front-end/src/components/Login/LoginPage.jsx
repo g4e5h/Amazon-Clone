@@ -14,19 +14,24 @@ function LoginPage() {
         <div id="main-sigin">
 
           {isRegistered &&
-            <>  <div id="signin">
+            <>  
+
+              <div id="signin">
               <span id="sign-in-up" >Sign-In</span>
+              
               <span id="email-or-phone">Email or mobile phone number</span>
               <input type="text" ></input>
               <button>Continue</button>
               <span id="policy-notice-text">By continuing, you agree to Amazon's <span>Conditions of Use</span> and <span>Privacy Notice</span>.</span>
               <span className="need-help"><AiFillCaretRight className='caret' />Need Help?</span>
-            </div>
+              </div>
 
               <div id="signin-bottom-line">
                 <span>New to Amazon?</span>
                 <button onClick={()=>setIsRegistered(false)}>Create your Amazon account</button>
-              </div>  </>
+              </div> 
+              
+              </>
           }
 
           {!isRegistered && <div id="non-registered">

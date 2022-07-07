@@ -8,7 +8,7 @@ export default function SubheaderMain() {
   return (
     <div id="subheader-belt">
     
-    <Link to="/allproducts" style={{ textDecoration: 'none' }}>
+    <Link to="/allproducts/all" style={{ textDecoration: 'none' }}>
     <div id='Pre-Subheader-All-Container'> 
      <span id="hamburgur-menu"> &#8801; </span> <span id="alltext">All</span>  
      </div>

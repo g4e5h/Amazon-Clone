@@ -12,10 +12,10 @@ export default function CartComponent(props) {
     function addProductToCart(){
 
       props.setMainCart((existingCardElements)=>{
-        
-       let currentElementRemovedArray=existingCardElements.filter((eachCartProductObject)=>eachCartProductObject.productid!==props.productid);   
-       //re-added id with updated quantity
-       return [...currentElementRemovedArray,{productid:props.productid,quantity:existing+1,productprice:props.productprice}]; 
+  
+       let index=existingCardElements.findIndex((obj)=>obj.productid===currentElementObj[0].id);
+       existingCardElements[index]={productid:props.productid,quantity:existing+1,productprice:props.productprice};
+       return [...existingCardElements]; 
 
    } );
     }
@@ -33,10 +33,9 @@ export default function CartComponent(props) {
          }
   
         }else{
-          //removing id
-          let currentElementRemovedArray=existingCardElements.filter((eachCartProductObject)=>eachCartProductObject.productid!==props.productid);   
-          //re-added id with updated quantity
-          return [...currentElementRemovedArray,{productid:props.productid,quantity:existing-1,productprice:props.productprice}]; 
+          let index=existingCardElements.findIndex((obj)=>obj.productid===currentElementObj[0].id);
+          existingCardElements[index]={productid:props.productid,quantity:existing-1,productprice:props.productprice};
+          return [...existingCardElements]; 
         }
 
       });

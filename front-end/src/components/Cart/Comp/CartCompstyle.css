@@ -165,12 +165,12 @@ top:0;
 #price-container button{
     cursor: pointer;
     position: absolute;
-    bottom: 2.7vmin;
+    bottom: 2vmin;
     right:1.6vmin;
     outline: none;
-    border:1px solid black;
+    border:1px solid rgba(0, 0, 0, 0);
     border-radius: 5vmin;
-    background-color: rgb(177, 6, 6);
+    background-color: rgb(245, 51, 51);
     color: white;
 }
 #price-container button:hover{

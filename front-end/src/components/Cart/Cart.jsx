@@ -38,7 +38,7 @@ export default function Cart(props) {
     <div>
     <div id="cart-items-sum-container-right">
       <div id="sum-container-top">
-      <span id="subtotal-heading-right">Subtotal ( {productCount} items ):<span id="total-amount-right">₹{totalCartValue}</span></span>
+      <span id="subtotal-heading-right">Subtotal ( {productCount} items ):<span id="total-amount-right">₹{Intl.NumberFormat('en-IN').format(totalCartValue)}</span></span>
       </div>
        
        <div id="proceed-to-buy-container" >

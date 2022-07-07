@@ -26,7 +26,7 @@ function App() {
    <Routes>
 
     <Route path='/'  element={<Body filter={search}/>}   />
-    <Route path='/allproducts'  element={<AllProducts cartupdater={setMainCart} mainCart={mainCart}/>}   />
+    <Route path='/allproducts/:productName'  element={<AllProducts cartupdater={setMainCart} mainCart={mainCart}/>}   />
     <Route path='/cart'  element={<Cart mainCart={mainCart} setMainCart={setMainCart} />}  />
     <Route path='/loginOrSignup'  element={<LoginPage />}   />
       {/*<Route path='/'  element={<Body />}   />

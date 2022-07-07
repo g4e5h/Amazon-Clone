@@ -28,7 +28,7 @@ export default function Search(props) {
 
   function debouncer(fun,delay){
       let timeout;
-    return function(){
+     return function(){
      let obj=this;
      let args=arguments;
      clearTimeout(timeout);
@@ -57,8 +57,8 @@ export default function Search(props) {
      
      
    { (searchIsFocused || searchBitIsFocused) && searchbar_text!=="" && <div id="search-results"  onMouseEnter={()=>setSearchBitIsFocused(true)} onMouseLeave={()=>setSearchBitIsFocused(false)} >
-     {filteredProductList.slice(0,15).map((eachProductObj)=>{
-        return <Link to='/allproducts' onClick={()=>setSearchBitIsFocused(false)} id="search-list-bit">&nbsp;&nbsp;{eachProductObj.description}</Link>
+     {filteredProductList.map((eachProductObj)=>{
+        return <Link to={`/allproducts/${eachProductObj.id}`} onClick={()=>setSearchBitIsFocused(false)} id="search-list-bit">&nbsp;&nbsp;{eachProductObj.description}</Link>
      })}
 
 
