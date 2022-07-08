@@ -5,14 +5,12 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-window.setInterval(changeImage,10000);
-let count=0;
+window.setInterval(clickButton,10000);
 
-function changeImage(){
-  count= ++count % 13;
-  let imageSlider=document.querySelector('#image-slider');
-  if(imageSlider!=null)
-  imageSlider.style.backgroundImage=`url(/body-images-background/${count}.jpeg)`
+function clickButton(){
+  let button=document.querySelector('#left-slider-button');
+  if(button!=null)
+  button.click();
 }
 
 root.render(

@@ -11,8 +11,8 @@ const imageSrcArray=[
     {id:9,src:"body-images-background/9.jpeg"},
     {id:10,src:"body-images-background/10.jpeg"},
     {id:11,src:"body-images-background/11.jpeg"},
-    {id:12,src:"body-images-background/12.jpeg"}
-
+    {id:12,src:"body-images-background/12.jpeg"},
+    {id:13,src:"body-images-background/13.jpeg"}
 ];
 
 

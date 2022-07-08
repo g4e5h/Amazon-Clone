@@ -17,6 +17,12 @@ export default function Body() {
     else val=(val+change)%images.length;
     images[val].style.display="block";
   }
+  function borderen(e){
+  e.target.style.border="4px solid lightblue";
+  }
+  function borderdis(e){
+    e.target.style.border="0px solid lightblue";
+    }
 
   return (
     <div id="main-body">
@@ -25,8 +31,8 @@ export default function Body() {
       <img src="/body-images-background/0.jpeg" alt="*" />
       </div>
        {imageSrcArray.map((obj)=><Slider key={obj.id} src={obj.src} />)}
-       <button id='left-slider-button' onClick={()=>handler(+1)}>&#10094;</button>
-       <button id='right-slider-button' onClick={()=>handler(-1)}>&#10095;</button>
+       <button id='left-slider-button' onClick={()=>handler(+1)} onFocus={borderen} onBlur={borderdis}>&#10094;</button>
+       <button id='right-slider-button' onClick={()=>handler(-1)} onFocus={borderen} onBlur={borderdis}>&#10095;</button>
       </div>
   
       <div id='above-slider-absolute-container'>

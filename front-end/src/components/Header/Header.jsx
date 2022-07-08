@@ -28,7 +28,8 @@ export default function Header(props) {
       
       <div id="nav-right">
        <Link to="/cart" id="cart">
-           <div id="cartItemsCount">{cartSize}</div>
+          <span id="cartItemsCount" style={{  position: "absolute",zIndex: "1",left:"34px",bottom: "35px"}}>{cartSize>99 && "+"}</span>
+           <div id="cartItemsCount">{cartSize>99?"99":cartSize}</div>
           <img id="cartImage" src="/cart.png" alt="flag" />
         </Link>
          
